@@ -74,6 +74,12 @@ public class LocatorUtility {
     public Locator getElementWithText(String text) {
         return page.getByText(text, new Page.GetByTextOptions().setExact(false));
     }
+    /**
+     * Finds any element containing specific text (Partial match).
+     */
+    public Locator getElementWithExactText(String text) {
+        return page.getByText(text, new Page.GetByTextOptions().setExact(true));
+    }
 
     /**
      * Fallback for standard CSS selectors or XPaths.
